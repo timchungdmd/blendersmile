@@ -9,6 +9,7 @@ bl_info = {
 }
 
 import bpy
+from .operators import op_fabrication  # <--- NEW
 from .operators import op_library  # <--- NEW IMPORT
 # Import Modules
 from .core import constants, math_utils, topology, registration
@@ -87,6 +88,7 @@ classes = (
     op_design.SMILE_OT_CreateSilhouette,
     op_gingiva.SMILE_OT_AutoGingiva,
     op_rendering.SMILE_OT_CreateShaders,
+    op_fabrication.SMILE_OT_GenerateShell, # <--- NEW
     panels.SMILE_PT_Wizard,
 )
 classes = (
