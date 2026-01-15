@@ -34,7 +34,8 @@ class SMILE_PT_Wizard(bpy.types.Panel):
         box.label(text="Import Data")
         box.operator("smile.import_scan", icon='IMPORT')
         box.operator("smile.import_teeth_folder", icon='FILE_FOLDER')
-
+        
+        box.operator("smile.import_library", icon='FILE_FOLDER', text="Batch Import Library")
     def draw_align(self, layout):
         box = layout.box()
         box.label(text="Photogrammetry")
@@ -75,6 +76,7 @@ class SMILE_PT_Wizard(bpy.types.Panel):
         box.operator("smile.create_shaders", icon='SHADING_RENDERED', text="Apply TruSmile Shaders")
         box.operator("smile.create_rig", icon='LATTICE_DATA', text="Rig Selected")
 
+        box.operator("smile.auto_distribute", icon='CURVE_DATA', text="Auto-Place on Arch")
     def draw_export(self, layout):
         box = layout.box()
         box.label(text="Fabrication")
