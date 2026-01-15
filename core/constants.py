@@ -10,6 +10,8 @@ COL_WAXUP   = "Waxup"
 COL_VENEER  = "Veneers"
 COL_RIG     = "SmileRig"
 COL_MARGINS = "VeneerMargins"
+COL_GUIDES  = "SmileGuides"    # NEW
+COL_SILHOUETTE = "SmileSilhouette" # NEW
 
 # Domains
 DOMAIN_FACE = "FACE"
@@ -17,6 +19,10 @@ DOMAIN_MAX  = "MAX"
 DOMAIN_MAN  = "MAN"
 DOMAINS = (DOMAIN_FACE, DOMAIN_MAX, DOMAIN_MAN)
 DOMAIN_SHAPE = {DOMAIN_FACE: "SPHERE", DOMAIN_MAX: "CUBE", DOMAIN_MAN: "CONE"}
+
+# Materials
+MAT_TRUSMILE = "SMILE_TruSmile_Enamel"
+MAT_GUM      = "SMILE_TruSmile_Gum"
 
 # Colors
 NEON = [
