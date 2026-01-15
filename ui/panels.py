@@ -81,3 +81,14 @@ class SMILE_PT_Wizard(bpy.types.Panel):
         box = layout.box()
         box.label(text="Fabrication")
         box.operator("smile.export_veneer_active", icon='EXPORT')
+
+def draw_export(self, layout):
+        box = layout.box()
+        box.label(text="Fabrication")
+        
+        col = box.column(align=True)
+        col.prop(bpy.context.scene.smile_props, "cement_gap_slider") # Define this prop if you want slider access
+        col.operator("smile.generate_shell", icon='MOD_BOOLEAN', text="Create Printable Shell")
+        
+        box.separator()
+        box.operator("smile.export_veneer_active", icon='EXPORT', text="Export STL")
