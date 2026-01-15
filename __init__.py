@@ -9,7 +9,7 @@ bl_info = {
 }
 
 import bpy
-
+from .operators import op_library  # <--- NEW IMPORT
 # Import Modules
 from .core import constants, math_utils, topology, registration
 from .operators import op_align_2d, op_segmentation, op_veneer, op_rig, op_standard
@@ -88,6 +88,11 @@ classes = (
     op_gingiva.SMILE_OT_AutoGingiva,
     op_rendering.SMILE_OT_CreateShaders,
     panels.SMILE_PT_Wizard,
+)
+classes = (
+    # ... existing classes ...
+    op_library.SMILE_OT_ImportLibrary,  # <--- NEW CLASS
+    op_library.SMILE_OT_AutoDistribute, # <--- NEW CLASS
 )
 
 def register():
