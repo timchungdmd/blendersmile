@@ -1,0 +1,8 @@
+.worktrees/
+__pycache__/
+*.pyc
+.DS_Store
+.vscode/
+.omc/
+.claude/
+blendersmile_pnp_full_cleaned_20260318_165959.py
